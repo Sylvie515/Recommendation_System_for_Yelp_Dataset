@@ -1,6 +1,6 @@
 # Recommendation System for Yelp Dataset  
 
-Hybrid recommender that combines item-based collaborative filtering (MinHash + LSH + Pearson similarity) with a XGBoost regressor. Implemented with PySpark RDD for scalable CF and XGBoost for feature-based predictions.  
+Hybrid recommendation system combining item-based collaborative filtering (MinHash + LSH + Pearson similarity) with an XGBoost regressor, implemented with PySpark RDD for scalable CF and feature-based machine learning for rating prediction.  
 
 ## Project Structure  
 
@@ -15,12 +15,14 @@ root/
 │&nbsp;&nbsp;&nbsp;&nbsp;├─ tip.json  
 │&nbsp;&nbsp;&nbsp;&nbsp;├─ photo.json  
 │&nbsp;&nbsp;&nbsp;&nbsp;└─ checkin.json  
+├─ output/  
+│&nbsp;&nbsp;&nbsp;&nbsp;└─ val_prediction.csv&nbsp;&nbsp;&nbsp;&nbsp;# prediction result from competition.py  
 └─ README.md  
  
 ## Requirements & Environment  
 
 ```bash
-pip install xgboost scikit-learn numpy pandas pyspark
+pip install xgboost scikit-learn numpy pyspark
 ```
 
 - Originally implemented under Python 3.6 for course submission (Vocareum)  
@@ -69,6 +71,11 @@ Run the full pipeline using Spark:
 
 ```bash
 spark-submit competition.py <folder_path> <test_file_name> <output_file_name>  
+```
+
+Example:  
+```bash
+spark-submit competition.py ./ yelp_val.csv val_prediction.csv  
 ```
 
 ##  Evaluation & Runtime (Validation data)  
