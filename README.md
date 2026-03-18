@@ -93,10 +93,12 @@ The model was evaluated on the validation dataset (yelp_val.csv) using RMSE and 
 | ≥ 4        | 0 |  
 
 ### RMSE  
-RMSE = 0.9782  
+
+RMSE = 0.9781750475325418  
 
 ### Execution Time  
-~490 seconds (measured on local/Colab environment)  
+
+~100 seconds (measured on local/Colab environment)  
 
 ### Notes  
 - Runtime includes CF (LSH + similarity computation), feature engineering, model training, and hybrid prediction.  
