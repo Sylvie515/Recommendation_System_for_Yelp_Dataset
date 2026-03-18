@@ -6,19 +6,31 @@ Hybrid recommendation system combining item-based collaborative filtering (MinHa
 
 root/  
 ├─ competition.py  
-├─ Evaluation_and_Runtime.ipynb&nbsp;&nbsp;&nbsp;&nbsp;# val metrics  
+├─ Evaluation_and_Runtime.ipynb&nbsp;&nbsp;&nbsp;&nbsp;# validation metrics  
 ├─ data/  
-│&nbsp;&nbsp;&nbsp;&nbsp;├─ yelp_train.csv&nbsp;&nbsp;&nbsp;&nbsp;# train data  
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ yelp_train.csv&nbsp;&nbsp;&nbsp;&nbsp;# training data  
 │&nbsp;&nbsp;&nbsp;&nbsp;├─ yelp_val.csv&nbsp;&nbsp;&nbsp;&nbsp;# validation data  
-│&nbsp;&nbsp;&nbsp;&nbsp;├─ user.json&nbsp;&nbsp;&nbsp;&nbsp;# user metadata  
-│&nbsp;&nbsp;&nbsp;&nbsp;├─ business.json&nbsp;&nbsp;&nbsp;&nbsp;# business metadata  
-│&nbsp;&nbsp;&nbsp;&nbsp;├─ tip.json  
-│&nbsp;&nbsp;&nbsp;&nbsp;├─ photo.json  
-│&nbsp;&nbsp;&nbsp;&nbsp;└─ checkin.json  
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ user.json&nbsp;&nbsp;&nbsp;&nbsp;# user metadata (not included)  
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ business.json&nbsp;&nbsp;&nbsp;&nbsp;# business metadata (not included)  
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ tip.json&nbsp;&nbsp;&nbsp;&nbsp;# (not included)  
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ photo.json&nbsp;&nbsp;&nbsp;&nbsp;# (not included)  
+│&nbsp;&nbsp;&nbsp;&nbsp;└─ checkin.json&nbsp;&nbsp;&nbsp;&nbsp;# (not included)  
 ├─ output/  
-│&nbsp;&nbsp;&nbsp;&nbsp;└─ val_prediction.csv&nbsp;&nbsp;&nbsp;&nbsp;# prediction result from competition.py  
+│&nbsp;&nbsp;&nbsp;&nbsp;└─ val_prediction.csv&nbsp;&nbsp;&nbsp;&nbsp;# prediction results from competition.py  
 └─ README.md  
- 
+
+### Notes  
+
+- yelp_train.csv and yelp_val.csv are included in this repository.  
+- The following large JSON files are not included due to GitHub file size limitations:  
+  - data/user.json  
+  - data/business.json  
+  - data/tip.json  
+  - data/photo.json  
+  - data/checkin.json
+
+These files are required for feature extraction and model training.  
+
 ## Requirements & Environment  
 
 ```bash
